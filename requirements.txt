@@ -3,4 +3,3 @@ pandas
 streamlit
 pyomo
 glpk
-ipopt
