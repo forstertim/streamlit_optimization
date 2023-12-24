@@ -34,12 +34,12 @@ model = pyo.ConcreteModel()
 
 # Create variables, objective function and constraints
 model.decisionvariable = pyo.Var([1,2], domain=pyo.NonNegativeReals)
-model.obj = pyo.Objective(expr = obj_coef_c1*model.decisionvariable[1]**2 + obj_coef_c2*model.decisionvariable[2])
+model.obj = pyo.Objective(expr = obj_coef_c1*model.decisionvariable[1] + obj_coef_c2*model.decisionvariable[2])
 model.Constraint1 = pyo.Constraint(expr = constr_coef_a1*model.decisionvariable[1] + constr_coef_a2*model.decisionvariable[2] >= constr_coef_b)
 
 # Choose solver and solve model
 solver = pyo.SolverFactory('mindtpy')
-solver.solve(model, nlp_solver='ipopt') 
+solver.solve(model, mip_solver='glpk', nlp_solver='ipopt') 
 
 
 # STREAMLIT OUTPUTS
