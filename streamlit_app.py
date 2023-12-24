@@ -53,4 +53,4 @@ st.write(f'$x_1=${model.decisionvariable[1]():.2f}')
 st.write(f'$x_1=${model.decisionvariable[2]():.2f}')
 
 st.header("Objective function")
-st.write(f'$F=$: {model.obj():.2f}')
+st.write(f'$F=${model.obj():.2f}')
