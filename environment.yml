@@ -1,4 +1,0 @@
-channles:
-  - conda-forge 
-dependencies:
-  - numpy==ipopt
