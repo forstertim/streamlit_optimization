@@ -49,8 +49,8 @@ solver.solve(model)
 st.title("Optimal solution")
 
 st.header("Decision variables")
-st.write(model.decisionvariable[1]())
-st.write(model.decisionvariable[2]())
+st.write(f'$x_1=${model.decisionvariable[1]():.2f}')
+st.write(f'$x_1=${model.decisionvariable[2]():.2f}')
 
 st.header("Objective function")
-st.write(model.obj())
+st.write(f'$F=$: {model.obj():.2f}')
