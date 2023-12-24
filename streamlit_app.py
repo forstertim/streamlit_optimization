@@ -38,10 +38,10 @@ model.obj = pyo.Objective(expr = obj_coef_c1*model.decisionvariable[1] + obj_coe
 model.Constraint1 = pyo.Constraint(expr = constr_coef_a1*model.decisionvariable[1] + constr_coef_a2*model.decisionvariable[2] >= constr_coef_b)
 
 # Choose solver and solve model
-# solver = pyo.SolverFactory('mindtpy')
-# solver.solve(model, mip_solver='glpk', nlp_solver='ipopt') 
-solver = pyo.SolverFactory('glpk')
-solver.solve(model) 
+solver = pyo.SolverFactory('mindtpy')
+solver.solve(model, mip_solver='glpk', nlp_solver='ipopt') 
+# solver = pyo.SolverFactory('glpk')
+# solver.solve(model) 
 
 
 # STREAMLIT OUTPUTS
