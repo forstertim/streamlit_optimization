@@ -1,6 +1,5 @@
-# Welcome to Streamlit!
+# Streamlit example!
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire. :heart:
+A first trial to run an optimization problem on Streamlit :heart:
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+The app is stored [here](https://tims-optimization.streamlit.app/). 
