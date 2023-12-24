@@ -39,7 +39,8 @@ model.Constraint1 = pyo.Constraint(expr = constr_coef_a1*model.decisionvariable[
 
 # Choose solver and solve model
 solver = pyo.SolverFactory('mindtpy')
-solver.solve(model, mip_solver='glpk', nlp_solver='ipopt') 
+# solver.solve(model, mip_solver='glpk', nlp_solver='ipopt') 
+solver.solve(model, mip_solver='glpk') 
 
 
 # STREAMLIT OUTPUTS
