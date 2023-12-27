@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 ####################################################################
 st.title("IPOPT path")
 import subprocess
-ipopt_path = subprocess.check_output(['where', 'ipopt'], shell=True).decode('utf-8')
+ipopt_path = subprocess.check_output(['which', 'ipopt'], shell=True).decode('utf-8')
 st.write(f"{ipopt_path}")
 
 # STREAMLIT INPUTS
