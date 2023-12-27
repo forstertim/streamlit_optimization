@@ -55,10 +55,10 @@ model.Constraint1 = pyo.Constraint(expr = constr_coef_a1*model.decisionvariable[
 constraint_func = lambda x_1_: (constr_coef_b1 - constr_coef_a1*x_1_)/constr_coef_a2
 
 # Choose solver and solve model
-solver = pyo.SolverFactory('ipopt')
+# solver = pyo.SolverFactory('ipopt')
 # solver.solve(model, mip_solver='glpk', nlp_solver='ipopt') 
-# solver = pyo.SolverFactory('glpk')
-solver.solve(model) 
+solver = pyo.SolverFactory('glpk')
+solver.solve(model, tee=True) 
 
 
 # STREAMLIT OUTPUTS
