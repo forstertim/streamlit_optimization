@@ -9,6 +9,9 @@ import matplotlib.pyplot as plt
 
 # FIND IPOPT PATH (TEMPORARY CODE)
 ####################################################################
+import os
+st.write("PATH:", os.environ['PATH'])
+
 st.title("IPOPT path")
 import subprocess
 ipopt_path = subprocess.check_output(['which', 'ipopt'], shell=True).decode('utf-8').strip()
