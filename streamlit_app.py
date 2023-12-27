@@ -114,7 +114,7 @@ else:
     # Get figure
     fig,ax = plt.subplots()
     # Plot objective controur lines
-    CS=ax.contour(X1, X2, F, levels=10, linestyles='dashed', linewidths=1)
+    CS=ax.contour(X1, X2, F, levels=10, linestyles='solid', linewidths=1)
     ax.clabel(CS, CS.levels, inline=True, fontsize=8)
     # Plot constraint
     ax.plot(x1_, constraint_func_f1(x1_), label=f'Constraint $f_1$', marker='', linestyle='--', color='k')
