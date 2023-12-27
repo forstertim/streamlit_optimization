@@ -7,6 +7,12 @@ import streamlit as st
 import pyomo.environ as pyo
 import matplotlib.pyplot as plt
 
+# FIND IPOPT PATH (TEMPORARY CODE)
+####################################################################
+st.title("IPOPT path")
+import subprocess
+ipopt_path = subprocess.check_output(['where', 'ipopt'], shell=True).decode('utf-8')
+st.write(f"{ipopt_path}")
 
 # STREAMLIT INPUTS
 ####################################################################
