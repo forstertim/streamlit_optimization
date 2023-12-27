@@ -17,7 +17,12 @@ chosen_objective = st.selectbox("Choose objective function:", ("Linear", "Nonlin
 
 if chosen_objective == "Nonlinear":
 
-    st.info(f"You chose to minimize a {chosen_objective.upper()} function! \n\nThe problem we are trying to solve is the following: \n\n$\min_{{x_1,x_2}} \quad c_1x_1^2 + c_2x_2 $ \n\n s.t. $\qquad a_1x_1 + a_2x_2 \geq b$ \n\n $\qquad \quad x_i \geq 0, \quad i=1,2$")
+    st.info(f"You chose to minimize a {chosen_objective.upper()} function! \n\nThe problem we are trying to solve is the following: \
+            \n\n$\min_{{x_1,x_2}} \quad c_1x_1^2 + c_2x_2 $ \
+            \n\n subject to: \
+            \n\n $\qquad f_1: \quad a_1x_1 + a_2x_2 \geq b_1$ \
+            \n\n $\qquad f_2: \quad x_2 \geq b_2$ \
+            \n\n $\qquad f_3: \quad x_i \geq 0, \quad i=1,2$")
     st.error("Curently, a nonlinear solver is not implemented yet! In the meantime, you can generate some random emojis below 🥰")
     import random
     def random_emoji():
