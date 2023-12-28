@@ -12,8 +12,10 @@ import matplotlib.pyplot as plt
 ####################################################################
 st.title("Check IPOPT Path")
 import os
+import subprocess
 st.write("Environment path: ", os.environ['PATH'])
 st.write("Current file path: ", os.getcwd())
+st.write("IPOPT path: ", subprocess.check_output(['which', 'ipopt']))
 
 
 # STREAMLIT INPUTS
