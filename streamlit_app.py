@@ -17,7 +17,7 @@ import subprocess
 st.write("Environment path: ", os.environ['PATH'])
 st.write("Current file path: ", os.getcwd())
 
-cmd = subprocess.Popen('cwd', stdout=subprocess.PIPE)
+cmd = subprocess.Popen('pwd', stdout=subprocess.PIPE)
 cmd_out, cmd_err = cmd.communicate()
 st.write("IPOPT path: ", cmd_out)
 
