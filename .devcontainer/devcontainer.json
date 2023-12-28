@@ -19,7 +19,7 @@
       ]
     }
   },
-  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade && sudo xargs apt install -y <packages.txt && sudo apt-get install -y coinor-libipopt-dev && conda env update -n base --file environment.yml",
+  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade && sudo xargs apt install -y <packages.txt && sudo apt-get install -y coinor-libipopt-dev && pip3 install --user -r requirements.txt",
   "postAttachCommand": {
     "server": "streamlit run streamlit_app.py --server.enableCORS false --server.enableXsrfProtection false"
   },

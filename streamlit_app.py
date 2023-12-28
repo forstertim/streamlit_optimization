@@ -8,20 +8,6 @@ import pyomo.environ as pyo
 import matplotlib.pyplot as plt
 
 
-# TEMPORARY CHECK OF IPOPT PATH
-####################################################################
-st.title("Check IPOPT Path")
-import os
-import sys
-import subprocess
-st.write("Environment path: ", os.environ['PATH'])
-st.write("Current file path: ", os.getcwd())
-
-cmd = subprocess.Popen('pwd', stdout=subprocess.PIPE)
-cmd_out, cmd_err = cmd.communicate()
-st.write("IPOPT path: ", cmd_out)
-
-
 # STREAMLIT INPUTS
 ####################################################################
 st.title("Let's solve an optimization problem!")

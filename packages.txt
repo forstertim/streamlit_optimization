@@ -3,3 +3,6 @@ libgmp3-dev
 glpk-utils
 locales-all
 coinor-libipopt-dev
+cython3 
+python3-numpy 
+coinor-libipopt1v5
