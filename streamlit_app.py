@@ -16,7 +16,10 @@ import sys
 import subprocess
 st.write("Environment path: ", os.environ['PATH'])
 st.write("Current file path: ", os.getcwd())
-st.write("IPOPT path: ", subprocess.check_output(['which','ipopt']).decode(sys.stdout.encoding).strip())
+
+cmd = subprocess.Popen('ls', stdout=subprocess.PIPE)
+cmd_out, cmd_err = cmd.communicate()
+st.write("IPOPT path: ", cmd_out)
 
 
 # STREAMLIT INPUTS
