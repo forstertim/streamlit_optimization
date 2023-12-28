@@ -129,6 +129,8 @@ ax.fill_between(x1_, constraint_func_f1(x1_), constraint_func_f2(gridpoints), co
 # Plot optimal solution
 if chosen_objective == "Linear":
     ax.scatter(model.decisionvariable[1](), model.decisionvariable[2](), label=f'Optimal solution', marker='o', color='r', s=80)
+elif chosen_objective == "Nonlinear":
+    ax.scatter(model.decisionvariable[1](), model.decisionvariable[2](), label=f'Optimal solution', marker='d', color='b', s=80)
 # Plot settings and legend
 plt.xlabel('$x_1$')
 plt.ylabel('$x_2$')
