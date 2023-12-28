@@ -93,8 +93,9 @@ if chosen_objective == "Linear":
                \n\n $F^*= {model.obj():.2f} \quad$ with $\quad$ $(x_1^*, x_2^*)=({model.decisionvariable[1]():.2f}, {model.decisionvariable[2]():.2f})$')
 
 elif chosen_objective == "Nonlinear":
-    # solver = pyo.SolverFactory('ipopt')
+    solver = pyo.SolverFactory('ipopt')
     # solver.solve(model, mip_solver='glpk', nlp_solver='ipopt') 
+    solver.solve(model) 
     st.warning(f'No solution procedure implemented yet, but let us check out the functions below!')
     
 
