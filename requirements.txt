@@ -4,4 +4,3 @@ streamlit
 pyomo
 glpk
 matplotlib
-ipopt
