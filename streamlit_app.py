@@ -93,9 +93,9 @@ if chosen_objective == "Linear":
                \n\n $F^*= {model.obj():.2f} \quad$ with $\quad$ $(x_1^*, x_2^*)=({model.decisionvariable[1]():.2f}, {model.decisionvariable[2]():.2f})$')
 
 elif chosen_objective == "Nonlinear":
-    solver = pyo.SolverFactory('ipopt')
+    # solver = pyo.SolverFactory('ipopt')
     # solver.solve(model, mip_solver='glpk', nlp_solver='ipopt') 
-    solver.solve(model) 
+    # solver.solve(model) 
     st.warning(f'No solution procedure implemented yet, but let us check out the functions below!')
     
 
@@ -129,8 +129,6 @@ ax.fill_between(x1_, constraint_func_f1(x1_), constraint_func_f2(gridpoints), co
 # Plot optimal solution
 if chosen_objective == "Linear":
     ax.scatter(model.decisionvariable[1](), model.decisionvariable[2](), label=f'Optimal solution', marker='o', color='r', s=80)
-elif chosen_objective == "Nonlinear":
-    ax.scatter(model.decisionvariable[1](), model.decisionvariable[2](), label=f'Optimal solution', marker='d', color='b', s=80)
 # Plot settings and legend
 plt.xlabel('$x_1$')
 plt.ylabel('$x_2$')
