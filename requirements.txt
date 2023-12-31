@@ -4,3 +4,4 @@ streamlit
 pyomo
 glpk
 matplotlib
+gekko

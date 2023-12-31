@@ -2,7 +2,7 @@
 
 Let's run an optimization problem on Streamlit :heart:
 
-In the top of this simple app, one can choose the type of objective function we would like to minimize, which is either a `linear` one, or a `nonlinear` one. 
+In the top of this simple app, one can choose the type of objective function we would like to minimize, which is either a `linear` (will be solved with Pyomo) one, or a `nonlinear` (will be solved using GEKKO) one. 
 
 Since this is a very simple example, we stick to the following objective functions:
 
