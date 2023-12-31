@@ -19,19 +19,20 @@ chosen_objective = st.selectbox("Choose objective function:", ("Linear", "Nonlin
 
 if chosen_objective == "Nonlinear":
 
-    st.info(f"You chose to minimize a {chosen_objective.upper()} function! \n\n We will solve this with PYOMO (and GLPK). The problem we are trying to solve is the following: \
+    # Display problem
+    st.info(f"You chose to minimize a {chosen_objective.upper()} function! \n\n We will solve this with GEKKO (and IPOPT). The problem we are trying to solve is the following: \
             \n\n$\min_{{x_1,x_2}} \quad c_1x_1^2 + c_2x_2 $ \
             \n\n subject to: \
             \n\n $\qquad f_1: \quad a_1x_1 + a_2x_2 \geq b_1$ \
             \n\n $\qquad f_2: \quad x_2 \geq b_2$ \
             \n\n $\qquad f_3: \quad x_i \geq 0, \quad i=1,2$")
-    st.warning("The nonlinear problem with GEKKO and IPOPT might take a bit more time to solve than the linear objective with GLPK, so be patient 🥰")
+    st.warning("The nonlinear problem solved with IPOPT might take a bit more time than the linear objective with GLPK, so be patient 🥰")
     st.warning('It might be more obvious to see where the contour lines intersect the constraints if you change the number of contour lines until you see an intersection 😊')
 
 else:
 
     # Display problem
-    st.info(f"You chose to minimize a {chosen_objective.upper()} function! We will solve this with GEKKO (and IPOPT).\n\nThe problem we are trying to solve is the following: \
+    st.info(f"You chose to minimize a {chosen_objective.upper()} function! We will solve this with PYOMO (and GLPK).\n\nThe problem we are trying to solve is the following: \
             \n\n$\min_{{x_1,x_2}} \quad c_1x_1 + c_2x_2 $ \
             \n\n subject to: \
             \n\n $\qquad f_1: \quad a_1x_1 + a_2x_2 \geq b_1$ \
