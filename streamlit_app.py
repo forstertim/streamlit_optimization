@@ -11,7 +11,7 @@ from gekko import GEKKO
 
 # STREAMLIT INPUTS
 ####################################################################
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 st.title("Let's solve an optimization problem!")
 
 # Drop down menu for objective function
