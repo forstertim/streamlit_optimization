@@ -5,3 +5,4 @@ pyomo
 glpk
 matplotlib
 gekko
+numpy
